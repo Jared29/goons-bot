@@ -39,6 +39,7 @@ client.on('message', async function(message) {
                 let cmdName = file.substring(0, file.indexOf(".js"));
                 let cmdModule = require(path.join(__dirname, dir, file));
                 client.commands.set(cmdName, cmdModule);
+                
             }
         }
     }
